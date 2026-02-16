@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card p-4 shadow">
+    <h2 class="mb-4">Login</h2>
+    <form method="POST">                
+        <div class="mb-3 row">
+          <label for="input_email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="text"  class="form-control"  name="input_email">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="input_regno" class="col-sm-2 col-form-label">Reg_No</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control"  name="input_regno">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="input_password" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control"  name="input_password">
+          </div>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</div>
+
+<h6>The Output Data is:  </h6>
+<p3>Email: {{email}}</p3><br>
+<p3>Regno: {{regno}}</p3><br>
+<p3>Password: {{password}}</p3>
+{% endblock %}

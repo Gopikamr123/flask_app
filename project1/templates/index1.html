@@ -1,0 +1,43 @@
+{% extends "base1.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h2 class="card-title">Form</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Enter your Name:</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Enter your Email:</label>
+                    <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="RegNo" class="form-label">Enter your RegNo:</label>
+                    <input type="number" class="form-control" id="RegNo" name="RegNo" placeholder="RegNo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="PhoneNo" class="form-label">Enter your Phone No:</label>
+                    <input type="number" class="form-control" id="PhoneNo" name="PhoneNo" placeholder="PhoneNo" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    {% if data %}
+    <div class="alert alert-success mt-4">
+        <h4>Submitted Data:</h4>
+        <p>Name: {{ data.name }}</p>
+        <p>Email: {{ data.email }}</p>
+        <p>RegNo: {{ data.regno }}</p>
+        <p>Phone: {{ data.phone }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
